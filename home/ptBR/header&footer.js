@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <button id="accept-cookies-btn" class="accept-cookies-btn">Aceitar</button>
     </div>
 
-        <p>&copy; 2024 Maracujá Games Studio. Todos os direitos reservados.</p> <a
+        <p>&copy; 2024 Maracujá Gamess Studio. Todos os direitos reservados.</p> <a
         href="politicadeprivacidade.html">Política de privacidade</a><br>
         <a href="../en/index.html">English</a>
     
