@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../schoolTeachSimfavi.png">
+    <meta name="description" content="Página oficial do jogo School TeachSim, desenvolvido por Maracujá Gamess.">
+    <link rel="stylesheet" href="../style.css">
+    <title>School TeachSim</title>
+    <style>
+        main {
+            width: 100%;
+            height: 90vh;
+            display: flex;
+        }
+
+        .mainLeft {
+            width: 40%;
+            background-color: grey;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mainLeft div {
+            margin: 50px;
+        }
+
+
+        .jogo {
+            background-color: rgb(226, 226, 226);
+            border-radius: 20px;
+            padding: 30px;
+            box-sizing: border-box;
+            max-width: 100%;
+        }
+
+        .pergunta p {
+            font-size: 25px;
+            text-align: center;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            overflow: hidden;
+            transition: height 1s, overflow 1s, margin 1s;
+            /* adicionando overflow e margin à transição */
+        }
+
+        .buttons.animation {
+            animation: animationButton 1s forwards;
+        }
+
+        .buttons button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .buttons button:nth-child(1) {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .buttons button:nth-child(2) {
+            background-color: #f44336;
+            color: white;
+        }
+
+        .buttons button:hover {
+            opacity: 0.8;
+        }
+
+        .aposResposta p {
+            font-size: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .aposResposta {
+            max-height: 0;
+            overflow: hidden;
+            transition: 1s;
+            margin: 0 !important;
+        }
+
+        .aposResposta.animation {
+            margin: 30px !important;
+            max-height: 500px;
+        }
+
+        @keyframes animationButton {
+            to {
+                height: 0;
+                margin: 0;
+            }
+        }
+
+        @keyframes animationText {
+
+            0% {}
+
+            100% {
+                max-height: 500px;
+            }
+        }
+
+        .mainRight{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 60%;
+        }
+
+        .mainRight h2{
+            font-size: 30px;
+        }
+
+        .mainRight p{
+            font-size: 25px;
+        }
+
+        .diasRestantes{
+            font-size: 23px;
+            color: rgb(90, 90, 90);
+        }
+
+
+        #sobre {
+            padding: 20px 10px;
+            background-color: #ffffff;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            margin-left: 10px;
+            margin-right: 10px;
+            max-width: 1800px;
+        }
+
+        .titleSobre {
+            color: #333333;
+            font-size: 32px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        #sobre p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #666666;
+            margin-bottom: 5px;
+        }
+
+        #sobre p:last-child {
+            margin-bottom: 0;
+        }
+
+        #sobre p:first-child {
+            font-weight: bold;
+            color: #008cba;
+        }
+
+        .subTitle{
+            font-size: 29px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: 900px){
+            main{
+                flex-direction: column-reverse;
+                height: auto;
+            }
+
+            .mainLeft{
+                width: 100%;
+            }
+
+            .mainRight{
+                width: 100%;
+                box-sizing: border-box;
+                padding: 20px;
+            }
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="navLeft">
+            <a href="index.html"><img src="../arquivos/schoolTeachSim2.png" alt="School TeachSim Logo"></a>
+            <p>por Maracujá Gamess</p>
+        </div>
+        <div class="navRight">
+            <button class="buttonFechar">x</button>
+            <ul>
+                <li><a href="creditos.html">créditos</a></li>
+                <li><a href="tutoriais.html">tutoriais</a></li>
+                <li><a href="download.html">jogar</a></li>
+                <li><a href="../en/index.html">english <img style="vertical-align: middle;" src="../arquivos/estados-unidos.png" alt="USA" style="width: 32px;"> </a></li>
+
+            </ul>
+        </div>
+
+        <div class="mobile">
+            <button class="mobileButton">
+                =
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <div class="mainLeft">
+
+            <div class="jogo">
+                <div class="pergunta">
+                    <p class="perguntaEmP">João respondeu que a capital do Brasil é o Rio de Janeiro.</p>
+                </div>
+                <div class="buttons">
+                    <button id="acertouBtn">Acertou</button>
+                    <button id="errouBtn">Errou</button>
+                </div>
+
+                <div class="aposResposta">
+                    <p class="pResposta">Você respondeu que ele está correto!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mainRight">
+            <h2>em 24 de maio</h2>
+            <p>jogue School TeachSim!</p>
+            <p class="diasRestantes">faltam glasscraft para lançar</p>
+        </div>
+    </main>
+
+    <section id="sobre">
+        <h2 class="titleSobre">Sobre</h2>
+        <p>Bem-vindo ao Teach SchoolSim.</p>
+        <p>No Teach SchoolSim você simula uma vida de professor.</p>
+        <p>Faça provas, trabalhos, perguntas, e interaja com seus alunos no jogo.</p>
+        <p>Junte-se a nós nesta jornada e se prepare para explorar o jogo!</p>
+
+        <br>
+        <h3 class="subTitle">Lançamento</h3>
+        <p>O jogo será lançado em 24 de maio,</p>
+        <p>na Play Store.</p>
+    </section>
+
+
+
+    <footer>
+        <div class="footer-logo">
+            <img src="../arquivos/schoolTeachSim2.png" alt="Logo">
+            <p>desenvolvido por Maracujá Gamess</p>
+        </div>
+        <div class="footer-links">
+            <a href="creditos.html">Créditos</a>
+            <a href="politicadeprivacidade.html">Política de privacidade</a>
+            <a href="termosepoliticadeprivacidade.html">Termos e Política de Privacidade do jogo</a>
+            <a href="download.html">Download</a>
+            <a href="../../home/ptBR/contato.html">Contato</a>
+        </div>
+    </footer>
+    
+
+    <div id="cookie-banner" class="cookie-banner">
+        <p>Este site utiliza cookies para garantir a melhor experiência para você. Ao continuar a navegar, você concorda com o uso de cookies. <br> <a style="color: white;" href="politicadeprivacidade.html">Política de privacidade.</a></p>
+        <button id="accept-cookies-btn" class="accept-cookies-btn">Aceitar</button>
+    </div>
+
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const acceptCookiesBtn = document.getElementById('accept-cookies-btn');
+    const cookieBanner = document.getElementById('cookie-banner');
+
+    // Verifica se o usuário já aceitou os cookies anteriormente
+    const cookiesAccepted = localStorage.getItem('cookieConsentWebsiteMaracujaGamess');
+
+    if (!cookiesAccepted) {
+        // Se os cookies ainda não foram aceitos, exibe o aviso
+        cookieBanner.style.display = 'block';
+    }
+
+    // Quando o usuário clica em "Aceitar", oculta o aviso e armazena a aceitação no localStorage
+    acceptCookiesBtn.addEventListener('click', function() {
+        localStorage.setItem('cookieConsentWebsiteMaracujaGamess', true);
+        cookieBanner.style.display = 'none';
+    });
+});
+
+</script>
+
+
+    <script>
+
+        var perguntas = [
+            { pergunta: "João respondeu que a capital do Brasil é o Rio de Janeiro.", genero: "masculino" },
+            { pergunta: "Maria falou que 2+2 = 4.", genero: "feminino" },
+            { pergunta: "Joaquina respondeu que a capital do Brasil é Porto Alegre.", genero: "feminino" },
+            { pergunta: "Mario respondeu que o maior planeta do Sistema Solar é o Sol.", genero: "masculino" },
+            { pergunta: "Pedro afirmou que a Terra é uma coxinha.", genero: "masculino" },
+            { pergunta: "Carla disse que 1 litro de água pesa 1 quilo.", genero: "feminino" },
+            { pergunta: "Rafael declarou que a lua é feita de queijo.", genero: "masculino" },
+            { pergunta: "Sofia argumentou que as aves são feitas de isopor.", genero: "feminino" },
+            { pergunta: "Fernando afirmou que a velocidade da luz é mais lenta que a do som.", genero: "masculino" },
+            { pergunta: "Matheus falou que a Geografia estuda os planetas.", genero: "masculino" },
+            {"pergunta": "Luis afirmou que <a href=\"https://glasscraft.github.io/website/ptBR/index.html\">GlassCraft</a> é o melhor jogo de gerenciar vidraçaria!","genero": "masculino"}, { pergunta: "Augusto afirmou que School TeachSim é o melhor jogo de gerenciar vidraçaria!", genero: "masculino" },
+
+        ];
+
+
+
+        var pergunta = document.querySelector(".perguntaEmP");
+        var afirmacao;
+
+        var genero;
+
+        sortearPergunta();
+
+        function sortearPergunta() {
+            var indice = Math.floor(Math.random() * perguntas.length);
+            pergunta.innerHTML = perguntas[indice].pergunta;
+            afirmacao = perguntas[indice].pergunta;
+            genero = perguntas[indice].genero;
+        }
+
+        var pResposta = document.querySelector('.pResposta');
+
+        document.getElementById('acertouBtn').addEventListener('click', function () {
+            document.querySelector('.buttons').classList.add("animation");
+
+            if (genero == "masculino") {
+                pResposta.textContent = "Você falou que ele está correto!";
+            } else {
+                pResposta.textContent = "Você falou que ela está correta!";
+            }
+
+            
+            if(afirmacao == "Luis afirmou que <a href=\"https://glasscraft.github.io/website/ptBR/index.html\">GlassCraft</a> é o melhor jogo de gerenciar vidraçaria!"){
+                pResposta.textContent = "Vlw :)";
+            }
+
+            setTimeout(function () {
+                document.querySelector('.aposResposta').classList.add('animation');
+            }, 1000);
+        });
+
+        document.getElementById('errouBtn').addEventListener('click', function () {
+            document.querySelector('.buttons').classList.add("animation");
+            if (genero == "masculino") {
+                pResposta.textContent = "Você falou que ele está errado!";
+            } else {
+                pResposta.textContent = "Você falou que ela está errada!";
+            }
+
+            if(afirmacao == "Luis afirmou que <a href=\"https://glasscraft.github.io/website/ptBR/index.html\">GlassCraft</a> é o melhor jogo de gerenciar vidraçaria!"){
+                pResposta.textContent = "Ah, GlassCraft é o melhor sim!";
+            }
+
+            setTimeout(function () {
+                document.querySelector('.aposResposta').classList.add('animation');
+            }, 1000);
+        });
+    </script>
+
+    <script>
+        // Função para calcular os dias restantes até uma data específica
+function calcularDiasRestantes(ano, mes, dia) {
+    // Definir a data de destino
+    const dataDestino = new Date(ano, mes - 1, dia); // mês é 0-indexed, então subtraímos 1
+
+    // Obter a data atual
+    const dataAtual = new Date();
+
+    // Calcular a diferença em milissegundos entre as datas
+    const diferenca = dataDestino - dataAtual;
+
+    // Converter a diferença de milissegundos para dias
+    const diasRestantes = Math.ceil(diferenca / (1000 * 60 * 60 * 24));
+
+    return diasRestantes;
+}
+
+// Definir a data alvo (29 de abril)
+const anoAlvo = 2024;
+const mesAlvo = 5; // abril
+const diaAlvo = 24;
+
+var diasRestantesText = document.querySelector(".diasRestantes");
+
+// Calcular os dias restantes
+const diasRestantes = calcularDiasRestantes(anoAlvo, mesAlvo, diaAlvo);
+
+if(diasRestantes > 1){
+diasRestantesText.textContent = "Faltam " + diasRestantes + " dias para o lançamento!";
+} else if (diasRestantes == 1){
+    diasRestantesText.textContent = "Amanhã será o lançamento!";
+} else {
+    diasRestantesText.textContent = "Jogue agora mesmo!"
+}
+
+// Exibir o resultado
+console.log(`Faltam ${diasRestantes} dias para 29 de abril.`);
+
+    </script>
+
+    <script>
+   // Seleciona os elementos relevantes
+   const mobileButton = document.querySelector('.mobileButton');
+    const navRight = document.querySelector('.navRight');
+    const buttonFechar = document.querySelector('.buttonFechar');
+
+    // Função para fechar o menu lateral
+    function fecharMenu() {
+        navRight.classList.remove('active');
+    }
+
+    // Adiciona um ouvinte de evento de clique ao botão móvel
+    mobileButton.addEventListener('click', () => {
+        // Adiciona ou remove a classe "active" para mostrar ou ocultar o menu lateral
+        navRight.classList.toggle('active');
+    });
+
+    // Adiciona um ouvinte de evento de clique ao botão Fechar
+    buttonFechar.addEventListener('click', fecharMenu);
+
+    // Adiciona um ouvinte de evento de clique ao documento inteiro
+    document.addEventListener('click', (event) => {
+        // Verifica se o clique ocorreu fora do menu lateral
+        if (!navRight.contains(event.target) && !mobileButton.contains(event.target)) {
+            // Fecha o menu lateral
+            fecharMenu();
+        }
+    });
+    </script>
+
+</body>
+
+</html>

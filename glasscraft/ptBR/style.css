@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+}
+
+.nav_Logo{
+
+    background-color: white;
+    padding: 1px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.nav_Logo img {
+    height: 50px;
+}
+
+.nav_Items ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav_Items li {
+    margin-right: 20px;
+}
+
+.displayEvolua{
+    margin-top: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.seta{
+    font-size: 100px;
+}
+
+.setaBaixo{
+    font-size: 100px;
+    display: none;
+}
+.evoluaAFabrica{
+    height: 300px;
+    background-color: rgba(128, 128, 128, 0.479);
+
+}
+
+.evoluaAFabrica h2{
+    font-size: 30px;
+}
+
+.nav_Items a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.nav_Items a:hover {
+    text-decoration: underline;
+}
+
+main{
+    display: flex;
+    margin-top: 10vh;
+}
+
+.main_left{
+    width: 50%;
+    background-color: #333;
+    height: calc(100vh - 51px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_left p{
+    width: 70%;
+    color: white;
+    font-size: 20px;
+}
+
+.main_Right{
+display: flex;
+width: 50%;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+}
+
+.main_Right h1{
+margin-bottom: 20px;
+font-size: 40px;
+}
+
+.main_Right h2{
+color: red;
+padding: 10px;
+border: 5px;
+border-color: red;
+border-radius: 10px;
+}
+
+.funcionariosConteiner{
+    display: flex;
+}
+
+.funcionarios_left{
+    width: 50%;
+    height: 400px;
+    background-color: #5d93a8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.funcionarios_left p{
+    width: 60%;
+    font-size: 20px;
+
+}
+
+.funcionarios_right{
+    width: 50%;
+    height: 400px;
+    background-image: url("Captura de tela 2024-01-05 205948.png");
+    background-size: cover;
+    background-position: center;
+}
+
+
+.prepare-seParaJogar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 300px;
+}
+
+.prepare-seParaJogar h3{
+    font-size: 30px;
+}
+
+.prepare-seParaJogar p{
+    font-size: 20px;
+}
+
+footer{
+    background-color: #333;
+    display: flex;
+    height: 300px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footerTop{
+display: flex;
+justify-content: space-around;
+align-items: center;
+width: 100%;
+padding: 50px;
+box-sizing: border-box;
+}
+
+.footerLeft{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footerLeft h4, p{
+    color: white;
+}
+
+.footerLeft h4{
+    font-size: 20px;
+}
+.footerLeft p{
+    font-size: 15px;
+}
+
+.footerRight{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.footerRight a{
+    color: white;
+    padding: 3px;
+    margin-top: 2px;
+}
+
+.footerBottom{
+    background-color: rgb(23, 23, 23);
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding-left: 50px;
+    
+}
+
+/* Reset some default styles for the button */
+.menu-button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    display: none;
+    background: none;
+    font-size: 50px;
+    cursor: pointer;
+  }
+
+  .cookie-banner {
+    position: fixed;
+    display: none;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.accept-cookies-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 24px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+}
+  
+
+  @media (max-width: 1000px){
+
+    .displayEvolua{
+        flex-direction: column;
+    }
+
+    .evoluaAFabrica{
+        height: auto;
+    }
+
+    .seta{
+        display: none;
+    }
+
+    .setaBaixo{
+        display: block;
+    }
+
+  }
+
+
+@media (max-width: 800px) {
+    main {
+        flex-direction: column;
+    }
+
+    .menu-button {
+        margin: 0;
+        padding: 0;
+        border: none;
+        display: block;
+        background: none;
+        font-size: 50px;
+        cursor: pointer;
+      }
+
+      .nav_Items{
+        top: 10vh;
+        right: -120%;
+        background-color: white;
+        display: flex;
+        transition: 0.1s;
+        justify-content: center;
+        position: fixed;
+        width: 90vw;
+        height: 100vh;
+    }
+
+    .nav_Items ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .nav_Items ul li{
+        font-size: 23px;
+    }
+
+    .nav_Items.show{
+        right: 0;
+    }
+      
+
+    .main_left{
+        width: 100%;
+        background-color: #333;
+        height: calc(100vh - 51px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+
+    .main_Right{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    }
+}
+

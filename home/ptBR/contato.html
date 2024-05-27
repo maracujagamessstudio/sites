@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* Estilização geral do formulário */
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+        }
+
+        /* Estilização dos rótulos e campos de entrada */
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        /* Estilização do botão de envio */
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Animação de entrada para os campos */
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: slideIn 0.5s forwards;
+        }
+
+        .topForm {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 100px;
+            align-items: center;
+        }
+
+        .manual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            min-height: 150px;
+        }
+
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+    <title>Contato</title>
+</head>
+
+<body>
+
+    <div class="top"></div>
+
+    <div class="topForm">
+        <h1>Nos contate por aqui</h1>
+    </div>
+
+    <form action="mailto:maracujagamessstudio@gmail.com" method="post" enctype="text/plain">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="jogo/assunto">Jogo/assunto:</label>
+        <select id="jogo/assunto" name="jogo/assunto" required>
+            <option value="School TeachSim." selected>School TeachSim</option>
+            <option value="GlassCraft">GlassCraft</option>
+            <option value="Outro assunto">Outro assunto</option>
+
+        </select>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+    <div class="manual">
+        <p>Se quiser nos contatar manualmente, mande um email para <a
+                href="mailto:maracujagamessstudio@gmail.com">maracujagamessstudio@gmail.com</a>.</p>
+        <p>Agradecemos o contato.</p>
+    </div>
+
+
+    <footer></footer>
+
+    <script src="header&footer.js"></script>
+
+</body>
+
+</html>

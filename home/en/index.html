@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maracujá Games Studio</title>
+    <style>
+        #games {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        #games img {
+            height: 200px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        #games div {
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-bottom: 40px;
+        }
+
+        #games img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div class="top">
+
+        <header>
+            <img class="logoEmpresa" src="../arquivos/MaracujaGamessStudioLogoSemFundo.png" alt="" style="pointer-events: none;">
+            <p>Your adventure starts here!</p>
+        </header>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#about">About</a>
+            <a href="#games">Portfolio</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+
+    <section>
+        <h2>Welcome to Maracujá Games Studio!</h2>
+        <p>We are dedicated to developing amazing games.</p>
+    </section>
+    <section id="games">
+        <div>
+            <a href="../../glasscraft/ptBR/index.html">
+                <img src="../arquivos/GlassCraftLogoSemFundo.png" alt="GlassCraft">
+            </a>
+            <p>GlassCraft - Build your glassworks</p>
+        </div>
+        <div>
+            <a href="../../schoolteachsim/en/index.html">
+                <img src="../arquivos/SchoolTeachSImLogoSemFundo.png" alt="SchoolTeachSim">
+            </a>
+            <p>School TeachSim - What's it like being a teacher?</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Maracujá Games Studio is a company dedicated to game development. With a focus on creativity and quality,
+            we aim to provide unique experiences to players in our projects.</p>
+        <p>Our latest game is School TeachSim, available on the Play Store.</p>
+    </section>
+
+    <div id="cookie-banner" class="cookie-banner">
+        <p>This website uses cookies to ensure the best experience for you. By continuing to browse, you agree to the use
+            of cookies. <br> <a style="color: white;" href="privacy-policy.html">Privacy Policy.</a></p>
+        <button id="accept-cookies-btn" class="accept-cookies-btn">Accept</button>
+    </div>
+
+
+    <footer>
+        <p>&copy; 2024 Maracujá Games Studio. All rights reserved.</p> <a
+            href="privacy-policy.html">Privacy Policy</a> <br>
+            <a href="../ptBR/index.html">Português</a>
+    </footer>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const acceptCookiesBtn = document.getElementById('accept-cookies-btn');
+            const cookieBanner = document.getElementById('cookie-banner');
+
+            // Check if the user has previously accepted cookies
+            const cookiesAccepted = localStorage.getItem('cookieConsentWebsiteMaracujaGamess');
+
+            if (!cookiesAccepted) {
+                // If cookies have not been accepted yet, display the notice
+                cookieBanner.style.display = 'block';
+            }
+
+            // When the user clicks "Accept", hide the notice and store acceptance in localStorage
+            acceptCookiesBtn.addEventListener('click', function () {
+                localStorage.setItem('cookieConsentWebsiteMaracujaGamess', true);
+                cookieBanner.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+
+</html>

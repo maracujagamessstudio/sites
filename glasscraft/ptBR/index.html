@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GlassCraft é um jogo que será disponibilizado na Play Store em 2024. Controle sua vidraçaria!">
+    <style>
+            #countdown {
+            font-size: 2em;
+            font-weight: bold;
+            color: #fff;
+            background-color: #4285f4;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+
+        .container{
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            height: 300px;
+            margin: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            padding: 40px;
+            box-sizing: border-box;
+        }
+
+        .cookie-consent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+        .steam {
+            margin-top: 10px;
+            display: none;
+        }
+
+        @keyframes moveArrow {
+            0% { transform: translateX(0); }
+            41% { transform: translateX(6px); }
+            100% { transform: translateX(0); }
+        }
+
+        @keyframes moveArrow2 {
+            0% { transform: translateX(0); }
+            40% { transform: translateX(5px); }
+            100% { transform: translateX(0); }
+        }
+
+        .seta1 {
+            display: inline-block;
+            animation: moveArrow2 1s infinite;
+        }
+
+        .seta2 {
+            display: inline-block;
+            animation: moveArrow 1s infinite;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <title>GlassCraft: Jogue agora mesmo!</title>
+</head>
+<body>
+
+    <nav>
+        <div class="nav_Logo">
+            <a href="index.html"><img src="../arquivos/Glass__1_-removebg-preview (1).png" alt="GlassCraft"></a>
+        </div>
+
+        <div class="nav_Items">
+            <ul>
+                <li><a href="creditos.html">Créditos</a></li>
+                <li><a href="sobre.html">Sobre o jogo</a></li>
+                <li><a href="https://play.google.com/store/apps/details?id=com.MaracujaGamessStudio.GlassCraft">Jogar</a></li>
+                <li><a href="lancamento.html">Download</a></li>
+            </ul>
+        </div>
+
+        <button class="menu-button" onclick="navResponsive()">=</button>
+    </nav>
+
+    <main>
+        <div class="main_left">
+            <p>
+                Bem-vindo ao GlassCraft, a simulação de gerenciamento de vidraçaria na plataforma Unity. No jogo, sua missão é transformar uma modesta vidraçaria em um empreendimento próspero. Atenda a pedidos variados, aprimore a eficiência da produção, gerencie recursos e busque lucros sustentáveis. Enfrente desafios autênticos, desde uma pequena oficina até uma vidraçaria em expansão. Com uma experiência envolvente, destacamos a complexidade e as recompensas da indústria do vidro. Em GlassCraft, sua visão estratégica e habilidades de liderança são cruciais. Pronto para liderar o caminho na indústria do vidro?            </p>
+        </div>
+
+        <div class="main_Right">
+           <h1>GlassCraft</h1>
+           <h2><a href="https://play.google.com/store/apps/details?id=com.MaracujaGamessStudio.GlassCraft" style="display: inline-block; background-color: #4CAF50; color: white; padding: 10px 20px; text-align: center; text-decoration: none; border-radius: 5px; border: none; cursor: pointer; font-size: 16px; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#45a049'" onmouseout="this.style.backgroundColor='#4CAF50'">Jogue Agora Mesmo</a></h2>
+        </div>
+    </main>
+
+
+    <div class="funcionariosConteiner">
+        <div class="funcionarios_left">
+            <p>
+                Contrate os funcionários. Mas lembre-se, ninguém gosta de um salário baixo. Pessoas habilidosas são importantes!
+            </p>
+        </div>
+
+        <div class="funcionarios_right">
+            
+        </div>
+    </div>
+
+    <div class="evoluaAFabrica">
+        <h2 style="margin-top: 10px; margin-left: 10px;">evolua a fábrica</h2>
+
+        <div class="displayEvolua">
+            <div class="img">
+               <img src="../arquivos/sprite1Fabrica.png" alt="Fabrica 1 nivel">
+            </div>
+
+            <div class="seta">
+                &rarr;
+            </div>
+
+            <div class="setaBaixo">
+                &darr;
+            </div>
+
+            <div class="img">
+                <img src="../arquivos/sprite2Fabrica.png" alt="Fabrica 2 nivel">
+            </div>  
+
+            <div class="seta">
+                &rarr;
+            </div>
+
+            <div class="setaBaixo">
+                &darr;
+            </div>
+
+            <div class="img">
+                <img src="../arquivos/sprite3Fabrica.png" alt="fabrica nivel 3">
+            </div>
+        </div>
+    </div>
+
+    <div class="prepare-seParaJogar">
+        <h3>jogue agora mesmo</h3><br>
+        <p style="color: black;">disponível na <a href="https://play.google.com/store/apps/details?id=com.MaracujaGamessStudio.GlassCraft" style="color: blue; text-decoration: none;">Play Store</a></p>
+    </div>
+
+
+    <div class="trailerContainer">
+
+    </div>
+
+
+    <footer>
+
+        <div class="footerTop">
+        <div class="footerLeft">
+            <h4>GlassCraft</h4>
+            <p>jogue, se divirta, aprenda</p>
+        </div>
+
+        <div class="footerRight">
+            <a href="creditos.html">Créditos</a>
+            <a href="lancamento.html">Lançamento</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="lancamento.html">Download</a>
+            <a href="politica-de-privacidade.html">Política de privacidade</a>
+            <a href="../../home/ptBR/contato.html">Contato</a>
+            <a href="termosJogo.html">Termos do jogo</a>
+
+        </div>
+
+
+
+    </div>
+
+    <div class="footerBottom">
+        GlassCraft Todos os Direitos Reservados 2024. Desenvolvido por Maracujá Gamess.
+    </div>
+    </footer>
+
+    <div id="cookie-banner" class="cookie-banner">
+        <p>Este site utiliza cookies para garantir a melhor experiência para você. Ao continuar a navegar, você concorda com o uso de cookies. <br> <a style="color: white;" href="../../home/ptBR/politicadeprivacidade.html">Política de privacidade.</a></p>
+        <button id="accept-cookies-btn" class="accept-cookies-btn">Aceitar</button>
+        </div>
+
+    
+
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const acceptCookiesBtn = document.getElementById('accept-cookies-btn');
+    const cookieBanner = document.getElementById('cookie-banner');
+
+    // Verifica se o usuário já aceitou os cookies anteriormente
+    const cookiesAccepted = localStorage.getItem('cookieConsentWebsiteMaracujaGamess');
+
+    if (!cookiesAccepted) {
+        // Se os cookies ainda não foram aceitos, exibe o aviso
+        cookieBanner.style.display = 'block';
+    }
+
+    // Quando o usuário clica em "Aceitar", oculta o aviso e armazena a aceitação no localStorage
+    acceptCookiesBtn.addEventListener('click', function() {
+        localStorage.setItem('cookieConsentWebsiteMaracujaGamess', true);
+        cookieBanner.style.display = 'none';
+    });
+});
+
+        const dataLancamento = new Date('2024-03-01T00:00:00Z').getTime();
+
+        // Atualiza o contador a cada segundo
+        const interval = setInterval(() => {
+            const agora = new Date().getTime();
+            const diferenca = dataLancamento - agora;
+
+            const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
+            const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
+
+            document.getElementById('countdown').innerHTML = `${dias}d ${horas}h ${minutos}m ${segundos}s`;
+
+            // Verifica se o tempo acabou
+            if (diferenca < 0) {
+                clearInterval(interval);
+                document.getElementById('countdown').innerHTML = 'O jogo foi lançado!';
+            }
+        }, 1000);
+    </script>
+
+    <script>
+        nav = document.querySelector(".nav_Items")
+        function navResponsive(){
+            nav.classList.toggle("show");
+        console.log("click");
+        }
+    </script>
+
+
+</body>
+</html>
