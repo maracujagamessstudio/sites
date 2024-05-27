@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <button id="accept-cookies-btn" class="accept-cookies-btn">Accept</button>
     </div>
 
-    <p>&copy; 2024 Maracujá Games Studio. All rights reserved.</p> <a
+    <p>&copy; 2024 Maracujá Gamess Studio. All rights reserved.</p> <a
     href="privacy-policy.html">Privacy Policy</a> <br>
     <a href="../ptBR/index.html">Português</a>
 
