@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
         <div class="footer-links">
         <a href="creditos.html">Créditos</a>
-        <a href="politicadeprivacidade.html">Política de privacidade</a>
+        <a href="../../home/ptBR/politicadeprivacidade.html">Política de privacidade</a>
         <a href="termosepoliticadeprivacidade.html">Termos e Política de Privacidade do jogo</a>
         <a href="download.html">Download</a>
         <a href="../../home/ptBR/contato.html">Contato</a>
