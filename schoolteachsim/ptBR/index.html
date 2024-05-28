@@ -192,6 +192,22 @@
             }
         }
 
+        .chamativo-botao {
+            background-color: #ff5733; /* Cor de fundo */
+            color: white; /* Cor do texto */
+            padding: 15px 30px; /* Espaçamento interno */
+            text-align: center; /* Alinhamento do texto */
+            text-decoration: none; /* Remover sublinhado */
+            display: inline-block; /* Display inline-block */
+            font-size: 20px; /* Tamanho da fonte */
+            border-radius: 12px; /* Bordas arredondadas */
+            transition: background-color 0.3s ease; /* Transição suave */
+        }
+
+        .chamativo-botao:hover {
+            background-color: #ff3300; /* Cor de fundo ao passar o mouse */
+        }
+
 
     </style>
 </head>
@@ -240,9 +256,10 @@
         </div>
 
         <div class="mainRight">
-            <h2>em 24 de maio</h2>
-            <p>jogue School TeachSim!</p>
-            <p class="diasRestantes">faltam glasscraft para lançar</p>
+            <h2>jogue agora mesmo</h2>
+            <p>School TeachSim!</p><br>
+            <a href="https://play.google.com/store/apps/details?id=com.MaracujaGamessStudio.SchoolTeachSim" class="chamativo-botao">jogar</a>
+
         </div>
     </main>
 
@@ -252,11 +269,6 @@
         <p>No Teach SchoolSim você simula uma vida de professor.</p>
         <p>Faça provas, trabalhos, perguntas, e interaja com seus alunos no jogo.</p>
         <p>Junte-se a nós nesta jornada e se prepare para explorar o jogo!</p>
-
-        <br>
-        <h3 class="subTitle">Lançamento</h3>
-        <p>O jogo será lançado em 24 de maio,</p>
-        <p>na Play Store.</p>
     </section>
 
 
@@ -378,46 +390,7 @@
         });
     </script>
 
-    <script>
-        // Função para calcular os dias restantes até uma data específica
-function calcularDiasRestantes(ano, mes, dia) {
-    // Definir a data de destino
-    const dataDestino = new Date(ano, mes - 1, dia); // mês é 0-indexed, então subtraímos 1
 
-    // Obter a data atual
-    const dataAtual = new Date();
-
-    // Calcular a diferença em milissegundos entre as datas
-    const diferenca = dataDestino - dataAtual;
-
-    // Converter a diferença de milissegundos para dias
-    const diasRestantes = Math.ceil(diferenca / (1000 * 60 * 60 * 24));
-
-    return diasRestantes;
-}
-
-// Definir a data alvo (29 de abril)
-const anoAlvo = 2024;
-const mesAlvo = 5; // abril
-const diaAlvo = 24;
-
-var diasRestantesText = document.querySelector(".diasRestantes");
-
-// Calcular os dias restantes
-const diasRestantes = calcularDiasRestantes(anoAlvo, mesAlvo, diaAlvo);
-
-if(diasRestantes > 1){
-diasRestantesText.textContent = "Faltam " + diasRestantes + " dias para o lançamento!";
-} else if (diasRestantes == 1){
-    diasRestantesText.textContent = "Amanhã será o lançamento!";
-} else {
-    diasRestantesText.textContent = "Jogue agora mesmo!"
-}
-
-// Exibir o resultado
-console.log(`Faltam ${diasRestantes} dias para 29 de abril.`);
-
-    </script>
 
     <script>
    // Seleciona os elementos relevantes
