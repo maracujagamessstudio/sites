@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <a href="index.html#about">About</a>
         <a href="index.html#games">Portfolio</a>
         <a href="contact.html">Contact</a>
+        <a href="https://maracujgamessupdatesen.wordpress.com/">Updates</a>
     </nav>
         `;
         // Adiciona a navegação ao cabeçalho
