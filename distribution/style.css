@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+    /* Remove blue highlight on mobile */
+
+}
+
+@font-face {
+    font-family: Gagalin;
+    src: url(arquivos/gagalin/Gagalin-Regular.otf)
+}
+
+.cookie-banner {
+    position: fixed;
+    display: none;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.accept-cookies-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 24px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+body {
+    padding-top: 10vh;
+}
+
+header {
+    background-color: rgb(190, 190, 190);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.logoSection {
+    height: 90%;
+}
+
+.logoSection a {
+    height: 100%;
+    transition: .3s;
+}
+
+.logoSection a img {
+    height: 100%;
+}
+
+.logoSection span {
+    margin-bottom: 50px;
+    font-size: 10px;
+}
+
+.logoSection span a {
+    height: auto;
+    text-decoration: none;
+    color: black;
+    transition: .2s;
+}
+
+.logoSection span a:hover {
+    text-decoration: underline;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    left: 0;
+    background: black;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    right: 0;
+}
+
+header button {
+    height: 30px;
+    width: 30px;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    display: none;
+}
+
+header button div {
+    height: 20%;
+    background-color: white;
+    border-radius: 10%;
+    width: 90%;
+    transition: .1s;
+}
+
+header button:hover div {
+    width: 100%;
+}
+
+#fecharButton {
+    display: none;
+}
+
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footerLeft img {
+    width: 300px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+}
+
+.footerLeft{
+    margin-bottom: 40px;
+}
+
+.footerLeft span {
+    display: block;
+    font-size: 14px;
+}
+
+.footerLeft a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footerRight a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footerRight{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.footerRight a:hover {
+    text-decoration: underline;
+}
+
+
+
+@media (max-width: 768px) {
+    header button {
+        display: flex;
+    }
+
+    header nav {
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 70vw;
+        display: flex;
+        justify-content: center;
+        align-items: top;
+        background-color: rgba(0, 0, 0, 0.862);
+        backdrop-filter: blur(10px); /* Adiciona o efeito de desfoque */
+        right: -120%;
+        transition: .2s;
+    }
+    
+
+    #fecharButton {
+        height: 10vh;
+        background-color: red;
+        color: white;
+        width: 100%;
+        position: absolute;
+        border: none;
+        display: flex;
+        font-size: 30px;
+    }
+
+    header nav.open {
+        right: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        display: flex;
+        justify-content: top;
+        padding-top: 14vh;
+        padding-bottom: 10vh;
+    }
+
+    nav ul li {
+        padding: 30px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul li a {
+        text-align: center;
+        color: white;
+    }
+
+    nav ul li a::after {
+        background: rgb(175, 20, 20);
+    }
+
+}

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página inicial do Distribution Simulator 2025.">
+    <meta name="keywords" content="jogo, caminhão, embalagens, simulador">
+    <link rel="icon" href="../arquivos/Distribution Simulator 2025Favi.png" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        #sobre {
+            background-color: #f9f9f9;
+            padding: 50px;
+            margin-bottom: 50px;
+        }
+
+        #sobre h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        #sobre p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #667;
+            margin-bottom: 20px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
+
+        
+main {
+    display: flex;
+}
+
+main div {
+    width: 100%;
+    height: 90vh;
+}
+
+main div img {
+    width: 80%;
+}
+
+.mainLeft{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainRight{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.mainRight h1 {
+    font-family: Gagalin, sans-serif;
+    font-size: 40px;
+}
+
+.mainRight p{
+    font-size: 30px;
+}
+
+
+        #iframe-container .wp-block-query-is-layout-constrained {
+            display: block;
+        }
+
+        #iframe-container :not(#wp--skip-link--target) {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+       main{
+        flex-direction: column-reverse;
+       }
+
+       .mainLeft{
+        height: auto;
+       }
+
+        }
+    </style>
+    <title>Distribution Simulator 2025</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="logoSection">
+            <a href="index.html"><img src="../arquivos/Distribution Simulator 2025logo.png"
+                    alt="Distribution Simulator"></a>
+            <span>por <a href="../../home/ptBR/index.html" style="height: auto;">Maracujá Gamess</a></span>
+        </div>
+        <nav>
+            <button id="fecharButton">x</button>
+            <ul>
+                <li><a href="#sobre">sobre</a></li>
+                <li><a href="https://play.google.com/store/apps/dev?id=7991213677989686077">download</a></li>
+                <li><a href="creditos.html">créditos</a></li>
+                <li><a href="../en/index.html">english</a></li>
+            </ul>
+        </nav>
+
+        <button id="openMenu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </button>
+
+
+    </header>
+
+    <main>
+        <div class="mainLeft">
+            <img src="../arquivos/bannerDistribution.png" alt="Banner Distribution">
+        </div>
+
+        <div class="mainRight">
+            <h1>Distribution Simulator</h1>
+            <p>prepare suas encomendas</p>
+            <p>para 2025...</p>
+        </div>
+    </main>
+
+    <section id="sobre">
+        <h2>Sobre o Jogo</h2>
+        <p>O Distribution Simulator 2025 é um jogo de simulação empresarial que coloca você no controle de uma empresa
+            de distribuição de embalagens. Com desafios estratégicos e operacionais, você terá que tomar decisões
+            cuidadosas para garantir o sucesso do seu negócio.</p>
+        <p>Explore diferentes aspectos da gestão empresarial, desde a logística de entrega até a negociação com
+            fornecedores e estratégias de marketing. Enfrente eventos inesperados que testarão suas habilidades de
+            gerenciamento em situações diversas.</p>
+        <p>Prepare-se para uma experiência imersiva onde cada decisão terá impacto no crescimento e no sucesso da sua
+            empresa.</p>
+    </section>
+
+    <footer>
+        <div id="cookie-banner" class="cookie-banner">
+            <p>Este site utiliza cookies para garantir a melhor experiência para você. Ao continuar a navegar, você concorda com o uso de cookies. <br> <a style="color: white;" href="../../home/ptBR/politicadeprivacidade.html">Política de privacidade.</a></p>
+            <button id="accept-cookies-btn" class="accept-cookies-btn">Aceitar</button>
+        </div>
+
+        <div class="footerLeft">
+            <img src="../arquivos/distributionsimulatorRetangular.png" alt="Logo Distribution Simulator">
+            <span>um jogo por <a href="../../home/ptBR/index.html">Maracujá Gamess Studio</a></span>
+        </div>
+
+        <div class="footerRight">
+            <a href="../../home/ptBR/politicadeprivacidade.html">Política de Privacidade</a>
+            <a href="creditos.html">Créditos</a>
+            <a href="termos-e-politica-de-privacidade.html">Termos de Uso de Política de Privacidade</a>
+            <a href="../../home/ptBR/contato.html">Contato</a>
+        </div>
+    </footer>
+
+
+
+
+    <script>
+        document.getElementById('openMenu').addEventListener('click', function () {
+            document.querySelector('nav').classList.add('open');
+        });
+
+        document.getElementById('fecharButton').addEventListener('click', function () {
+            document.querySelector('nav').classList.remove('open');
+        });
+
+        document.addEventListener('click', function (event) {
+            const navList = document.querySelector('nav');
+            const openMenu = document.getElementById('openMenu');
+
+            if (!navList.contains(event.target) && !openMenu.contains(event.target) && navList.classList.contains('open')) {
+                navList.classList.remove('open');
+            }
+        });
+
+    </script>
+
+    <script>
+         const acceptCookiesBtn = document.getElementById('accept-cookies-btn');
+    const cookieBanner = document.getElementById('cookie-banner');
+
+    // Verifica se o usuário já aceitou os cookies anteriormente
+    const cookiesAccepted = localStorage.getItem('cookieConsentWebsiteMaracujaGamess');
+
+    if (!cookiesAccepted) {
+        // Se os cookies ainda não foram aceitos, exibe o aviso
+        cookieBanner.style.display = 'block';
+    }
+
+    // Quando o usuário clica em "Aceitar", oculta o aviso e armazena a aceitação no localStorage
+    acceptCookiesBtn.addEventListener('click', function () {
+        localStorage.setItem('cookieConsentWebsiteMaracujaGamess', true);
+        cookieBanner.style.display = 'none';
+    });
+    </script>
+
+
+</body>
+
+</html>
