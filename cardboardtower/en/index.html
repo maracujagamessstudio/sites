@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cardboard Tower Homepage.">
+    <meta name="keywords" content="Cardboard Tower Game">
+    <link rel="icon" href="../arquivos/CARDBOARDQuadrado.png" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        #sobre {
+            background-color: #f9f9f9;
+            padding: 50px;
+            margin-bottom: 50px;
+        }
+
+        #sobre h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        #sobre p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #667;
+            margin-bottom: 20px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
+
+        
+main {
+    display: flex;
+}
+
+main div {
+    width: 100%;
+    height: 90vh;
+}
+
+main div img {
+    width: 80%;
+}
+
+.mainLeft{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainRight{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.mainRight h1 {
+    font-family: Gagalin, sans-serif;
+    font-size: 40px;
+}
+
+.mainRight p{
+    font-size: 30px;
+}
+
+
+        #iframe-container .wp-block-query-is-layout-constrained {
+            display: block;
+        }
+
+        #iframe-container :not(#wp--skip-link--target) {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+       main{
+        flex-direction: column-reverse;
+       }
+
+       .mainLeft{
+        height: auto;
+       }
+
+        }
+    </style>
+    <title>Cardboard Tower</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="logoSection">
+            <a href="index.html"><img src="../arquivos/CARDBOARDQuadrado.png"
+                    alt="Cardboard Tower"></a>
+            <span>by <a href="../../home/ptBR/index.html" style="height: auto;">Maracujá Gamess</a></span>
+        </div>
+        <nav>
+            <button id="fecharButton">x</button>
+            <ul>
+                <li><a href="#sobre">about</a></li>
+                <li><a href="https://play.google.com/store/apps/dev?id=7991213677989686077">download</a></li>
+                <li><a href="credits.html">credits</a></li>
+                <li><a href="../ptBR/index.html">português</a></li>
+            </ul>
+        </nav>
+
+        <button id="openMenu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </button>
+
+
+    </header>
+
+    <main>
+        <div class="mainLeft">
+            <img src="../arquivos/carboardReatngular.png" alt="Banner Distribution">
+        </div>
+
+        <div class="mainRight">
+            <h1>Cardboard Tower</h1>
+            <p>prepare your tower</p>
+            <p>of cardboard...</p>
+        </div>
+    </main>
+
+    <section id="sobre">
+        <h2>About the Game</h2>
+        <p>Cardboard Tower is a fun game where you need to build a tower using cardboard boxes. Explore different types of boxes and settings as you construct the tallest tower possible. Test your skill and balance to prevent the tower from collapsing! With captivating graphics and simple mechanics, Cardboard Tower offers a relaxing and challenging experience for all ages.</p>
+    </section>
+    
+
+    <footer>
+        <div id="cookie-banner" class="cookie-banner">
+            <p>This website uses cookies to ensure the best experience for you. By continuing to browse, you agree to the use of cookies. <br> <a style="color: white;" href="../../home/en/privacy-policy.html">Privacy Policy.</a></p>
+            <button id="accept-cookies-btn" class="accept-cookies-btn">Accept</button>
+        </div>
+
+        <div class="footerLeft">
+            <img src="../arquivos/carboardReatngular.png" alt="Logo Distribution Simulator">
+            <span>a game by <a href="../../home/en/index.html">Maracujá Gamess Studio</a></span>
+        </div>
+
+        <div class="footerRight">
+            <a href="../../home/en/privacy-policy.html">Policy Privacy</a>
+            <a href="credits.html">Credits</a>
+            <a href="terms-and-policy-privacy.html">Terms of Use and Policy Privacy</a>
+            <a href="../../home/en/contact.html">Contact</a>
+        </div>
+    </footer>
+
+
+
+
+    <script>
+        document.getElementById('openMenu').addEventListener('click', function () {
+            document.querySelector('nav').classList.add('open');
+        });
+
+        document.getElementById('fecharButton').addEventListener('click', function () {
+            document.querySelector('nav').classList.remove('open');
+        });
+
+        document.addEventListener('click', function (event) {
+            const navList = document.querySelector('nav');
+            const openMenu = document.getElementById('openMenu');
+
+            if (!navList.contains(event.target) && !openMenu.contains(event.target) && navList.classList.contains('open')) {
+                navList.classList.remove('open');
+            }
+        });
+
+    </script>
+
+    <script>
+         const acceptCookiesBtn = document.getElementById('accept-cookies-btn');
+    const cookieBanner = document.getElementById('cookie-banner');
+
+    // Verifica se o usuário já aceitou os cookies anteriormente
+    const cookiesAccepted = localStorage.getItem('cookieConsentWebsiteMaracujaGamess');
+
+    if (!cookiesAccepted) {
+        // Se os cookies ainda não foram aceitos, exibe o aviso
+        cookieBanner.style.display = 'block';
+    }
+
+    // Quando o usuário clica em "Aceitar", oculta o aviso e armazena a aceitação no localStorage
+    acceptCookiesBtn.addEventListener('click', function () {
+        localStorage.setItem('cookieConsentWebsiteMaracujaGamess', true);
+        cookieBanner.style.display = 'none';
+    });
+    </script>
+
+
+</body>
+
+</html>
